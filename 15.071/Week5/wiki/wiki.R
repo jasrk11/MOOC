@@ -102,3 +102,40 @@ table(wikiTest2$Vandal, predict2CART)
 # Word count
 wikiWords2$NumWordsAdded = rowSums(as.matrix(dtmAdded))
 wikiWords2$NumWordsRemoved = rowSums(as.matrix(dtmRemoved))
+mean(wikiWords2$NumWordsAdded)
+# Recreate CART
+wikiTrain2 = subset(wikiWords2, split==TRUE)
+wikiTest2 = subset(wikiWords2, split==FALSE)
+# new CART
+wiki3CART <- rpart(Vandal~., data = wikiTrain2, method = "class")
+prp(wiki3CART)
+
+#Accuracy
+predict3CART = predict(wiki3CART, newdata = wikiTest2, type = "class")
+table(wikiTest2$Vandal, predict3CART)
+#     0   1
+# 0 514 104
+# 1 297 248
+#Accuracy
+(514+248)/(514+248+104+297)
+
+
+# Problem 3.1 - Using Non-Textual Data
+wikiWords3 = wikiWords2
+wikiWords3$Minor = wiki$Minor
+wikiWords3$Loggedin = wiki$Loggedin
+# Recreate CART model
+wikiTrain3 = subset(wikiWords3, split==TRUE)
+wikiTest3 = subset(wikiWords3, split==FALSE)
+# new CART
+wiki3CART <- rpart(Vandal~., data = wikiTrain3, method = "class")
+prp(wiki3CART)
+
+#Accuracy
+predict3CART = predict(wiki3CART, newdata = wikiTest3, type = "class")
+table(wikiTest3$Vandal, predict3CART)
+#     0   1
+# 0 595  23
+# 1 304 241
+#Accuracy
+(595+241)/(595+241+23+304)
