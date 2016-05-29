@@ -1,4 +1,3 @@
-setwd("/home/musigma/MOOC/15.071/Week5/")
 tweets = read.csv("tweets.csv", stringsAsFactors = F)
 str(tweets)
 

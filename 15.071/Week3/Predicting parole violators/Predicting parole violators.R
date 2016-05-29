@@ -1,5 +1,5 @@
 rm(list = ls())
-setwd("/home/musigma/MOOC/15.071/Week3/Predicting parole violators/")
+
 
 # Problem 1.1 - Loading the Dataset 
 parole <- read.csv("parole.csv")

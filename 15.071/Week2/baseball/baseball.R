@@ -1,5 +1,5 @@
 rm(list=ls())
-setwd("/home/musigma/MOOC/15.071/Week2/baseball/")
+
 
 baseball <- read.csv("baseball.csv")
 

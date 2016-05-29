@@ -1,6 +1,5 @@
 # Read in the data
 rm(list=ls())
-setwd("/home/musigma/MOOC/15.071/Week4/why people vote/")
 gerber = read.csv("gerber.csv")
 
 # proportion of people in this dataset voted in this election

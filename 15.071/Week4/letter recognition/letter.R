@@ -1,4 +1,3 @@
-setwd("/home/musigma/MOOC/15.071/Week4/letter recognition/")
 letters = read.csv("letters_ABPR.csv")
 str(letters)
 letters$isB = as.factor(letters$letter == "B")

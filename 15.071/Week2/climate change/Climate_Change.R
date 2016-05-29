@@ -1,6 +1,5 @@
 rm(list=ls())
 
-setwd("C:\\Users\\rakesh.jasti\\Desktop")
 
 df <- read.csv("climate_change.csv")
 

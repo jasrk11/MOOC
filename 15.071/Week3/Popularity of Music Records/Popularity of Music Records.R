@@ -3,7 +3,6 @@
 
 
 rm(list=ls())
-setwd('/home/musigma/MOOC/15.071/Week3')
 
 songs<-read.csv("songs.csv", header = T, stringsAsFactors = F)
 

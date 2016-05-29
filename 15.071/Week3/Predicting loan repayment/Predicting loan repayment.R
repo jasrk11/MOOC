@@ -1,5 +1,4 @@
 rm(list = ls())
-setwd("/home/musigma/MOOC/15.071/Week3/Predicting loan repayment/")
 
 loans <- read.csv("loans.csv", header = T, stringsAsFactors = F)
 

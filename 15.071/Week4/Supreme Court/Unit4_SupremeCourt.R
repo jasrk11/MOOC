@@ -4,7 +4,6 @@
 # VIDEO 4
 
 # Read in the data
-setwd("/home/musigma/MOOC/15.071/Week4/Supreme Court/")
 stevens = read.csv("stevens.csv")
 str(stevens)
 

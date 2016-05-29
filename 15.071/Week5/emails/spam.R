@@ -1,5 +1,4 @@
 rm(list=ls())
-setwd("/home/musigma/MOOC/15.071/Week5/emails/")
 library(tm)
 library(SnowballC)
 emails = read.csv('emails.csv', stringsAsFactors = FALSE)

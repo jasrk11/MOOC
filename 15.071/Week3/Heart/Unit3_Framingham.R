@@ -3,7 +3,6 @@
 # Video 3
 
 # Read in the dataset
-setwd("/home/musigma/MOOC/15.071/Week3/Heart/")
 framingham = read.csv("framingham.csv")
 
 # Look at structure

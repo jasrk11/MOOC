@@ -1,5 +1,5 @@
 rm(list=ls())
-setwd("/home/musigma/MOOC/15.071/Week4/Predicting Earnings from census data/")
+
 census = read.csv("census.csv")
 library(caTools)
 set.seed(2000)

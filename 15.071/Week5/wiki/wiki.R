@@ -1,4 +1,3 @@
-setwd("/home/musigma/MOOC/15.071/Week5/wiki/")
 rm(list=ls())
 library(tm)
 library(SnowballC)

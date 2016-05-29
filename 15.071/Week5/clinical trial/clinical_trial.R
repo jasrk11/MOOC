@@ -1,5 +1,4 @@
 rm(list=ls())
-setwd("/home/musigma/MOOC/15.071/Week5/clinical trial/")
 library(tm)
 trials <- read.csv('clinical_trial.csv', stringsAsFactors = FALSE)
 
