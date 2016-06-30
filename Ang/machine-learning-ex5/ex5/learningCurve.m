@@ -53,20 +53,19 @@ error_val   = zeros(m, 1);
 
 % ---------------------- Sample Solution ----------------------
 
-for i = 1:m
+for i = 1:m,
+
     X_i = X(1:i, :);
     y_i = y(1:i);
-    [theta] = trainLinearReg([ones(i, 1) X_i], y_i, lambda);
-    error_train(i) = linearRegCostFunction([ones(i, 1) X_i], y_i, theta, 0);
-    error_val(i) = linearRegCostFunction([ones(m, 1) X], y, theta, 0);
-end
 
+    % fit linear regression on a subset of data
+    warning("off", "Octave:divide-by-zero");
+    theta = trainLinearReg(X_i, y_i, lambda);
+    warning("on", "Octave:divide-by-zero");
 
+    % evaluate train error
+    error_train(i) = linearRegCostFunction(X_i, y_i, theta, 0);
+    % evaluate validation error
+    error_val(i) = linearRegCostFunction(Xval, yval, theta, 0);
 
-
-
-% -------------------------------------------------------------
-
-% =========================================================================
-
-end
+end;
